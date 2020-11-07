@@ -1,0 +1,121 @@
+body{
+    width: 960px;
+}
+
+.titlebox{
+    /* font-size: 60px; */
+    /* font-family: sans-serif; */
+    color: black;
+    background-color: #fff;
+    background-image: linear-gradient(transparent 95%, rgba(0,0,0,.06)50%,rgba(0,0,0,.06)),linear-gradient( 90deg, transparent 95%, rgba(0,0,0,.06)50%, rgba(0,0,0,.06));
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    
+
+}
+
+.title{
+    font-size: 60px;
+    font-family: sans-serif;
+    color: black;
+    background-color: #fff;
+    background-image: linear-gradient(transparent 95%, rgba(0,0,0,.06)50%,rgba(0,0,0,.06)),linear-gradient( 90deg, transparent 95%, rgba(0,0,0,.06)50%, rgba(0,0,0,.06));
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    display: flex;
+    padding-top: 60px;
+    justify-content: center;
+}
+
+
+
+
+
+/* ul{
+	font-size: 21px;
+	display: flex;
+	justify-content: space-around;
+	width: 500px;
+	color:	black
+	
+	
+} */
+
+nav{
+text-align: center;
+}
+nav ul{
+margin: 0 ;
+padding: 0 ;
+}
+nav ul li{
+list-style: none;
+display: inline-block;
+width: 18%;
+min-width: 90px;
+}
+nav ul li a{
+text-decoration: none;
+color: #333;
+}
+
+#men{
+    text-align: center;
+    
+}
+
+#women{
+    text-align: center;
+}
+
+.main_1{
+    justify-content: center;
+}
+
+.oldmen{ 
+    width: 300px;
+    /* padding-left: 315px; */
+}
+
+.img_box1{
+    text-align: center;
+}
+.main_2{
+    justify-content: center;
+    
+
+}
+
+.oldwomen{
+    width: 300px;
+    /* padding-left: 315px; */
+
+
+}
+
+/* とりあえず・・・ */
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
