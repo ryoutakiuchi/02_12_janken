@@ -41,7 +41,7 @@
                 </div>
                 <div class="choice">
 
-                    <img id="oldmen" src="Untitled8.jpg" alt="">
+                    <img id="oldmen" class="oldmen_baby" src="Untitled8.jpg" alt="">
                     <img id="baby" src="Untitled3.jpg" alt="">
                     <div class="choice__">
                         <p class="choice_hand">何を出す？？</p>
@@ -87,7 +87,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
-            // ぐーチョキぱーを定義
+            // ぐーチョキぱーのコメントを定義
             $(function () {
                 const result = ['グー', 'チョキ', 'パー'];
 
@@ -104,6 +104,9 @@
                         document.getElementById("cpu_hand_gu").style.display = "block";
                         //$('#cpu_hand').text('ぐー');
                         //$('cpu_hand_gu').toggle();
+                        $('#my_hand_gu').on('click', function () {
+                            console.log('あいこ');
+                        })
 
 
                     } else if (rand == 1) {
@@ -127,57 +130,63 @@
 
                 // 人間が負ける手を選ぶ
                 // グーを選んだ時
-                $('#my_hand_gu').on('click', function () {
-                    let rand = Math.floor(Math.random() * 3);
-                    // console.log('hogehoge')
-                    // 0ぐー、1チョキ、2パーだから
-                    if (rand == 0) {
-                        $('#result').text('不正解');
-                        console.log('huuuuuuuuuu')
+                // let hand = ['ぐ', 'ちょ', 'ぱ'];
 
-                    } else if (rand == 1) {
-                        $('#result').text('不正解');
+                // $('#my_hand_gu').on('click', function () {
 
-                    } else {
-                        $('#result').text('正解');
-                        document.getElementById("baby").style.display = "block";
-                    }
+                // let rand = Math.floor(Math.random() * 3);
+                // console.log('hogehoge')
+                // 0ぐー、1チョキ、2パーだから
+                // if (hand == 0) {
+                // $('#result').text('不正解');
+                // console.log('huuuuuuuuuu')
 
-                });
+                // } else if (hand == 1) {
+                // $('#result').text('不正解');
+
+                // } else {
+                // $('#result').text('正解');
+                // document.getElementById("baby").style.display = "block";
+                // }
+
+                // });
+
+
+
                 // チョキを選んだ時
-                $('#my_hand_ch').on('click', function () {
-                    let rand = Math.floor(Math.random() * 3);
-                    console.log('hogehoge')
-                    // 0ぐー、1チョキ、2パーだから
-                    if (rand == 0) {
-                        $('#result').text('正解');
+                // $('#my_hand_ch').on('click', function () {
+                //     let rand = Math.floor(Math.random() * 3);
+                //     console.log('hogehoge')
+                //     // 0ぐー、1チョキ、2パーだから
+                //     if (rand == 0) {
+                //         $('#result').text('正解');
 
-                    } else if (rand == 1) {
-                        $('#result').text('不正解');
+                //     } else if (rand == 1) {
+                //         $('#result').text('不正解');
 
-                    } else {
-                        $('#result').text('不正解');
-                    }
+                //     } else {
+                //         $('#result').text('不正解');
+                //     }
 
-                });
-                // パーを選んだ時
-                $('#my_hand_pa').on('click', function () {
-                    let rand = Math.floor(Math.random() * 3);
-                    console.log('hogehoge')
-                    // 0ぐー、1チョキ、2パーだから
-                    if (rand == 0) {
-                        $('#result').text('不正解');
+                // });
+                // // パーを選んだ時
+                // $('#my_hand_pa').on('click', function () {
+                //     let rand = Math.floor(Math.random() * 3);
+                //     console.log('hogehoge')
+                //     // 0ぐー、1チョキ、2パーだから
+                //     if (rand == 0) {
+                //         $('#result').text('不正解');
 
-                    } else if (rand == 1) {
-                        $('#result').text('正解');
+                //     } else if (rand == 1) {
+                //         $('#result').text('正解');
 
-                    } else {
-                        $('#result').text('不正解');
-                    }
+                //     } else {
+                //         $('#result').text('不正解');
+                //     }
 
-                });
+                // });
 
-                $('#result')
+                // $('#result')
 
 
             });

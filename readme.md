@@ -1,5 +1,5 @@
 # じゃんけんのwebサイト
-- 
+- https://ryoutakiuchi.github.io/02_12_janken/
 ## プロダクトの紹介
 - 若返りじゃんけん
 ## 工夫した点
