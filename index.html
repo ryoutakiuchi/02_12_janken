@@ -54,148 +54,172 @@
                     </div>
                 </div>
 
-                <ul>
+                <!-- <ul>
                     <li id="gu_btn">グー</li>
                     <li id="cho_btn">チョキ</li>
                     <li id="par_btn">パー</li>
                 </ul>
                 <div id="com_hand">コンピューターの出した手は？</div>
-                <div id="judgment">結果は？</div>
-
-
-
+                <div id="judgment">結果は？</div> -->
             </section>
-            <section>
+
+            <section class="main_2">
                 <h1 id="women">WOMEN</h1>
                 <div class="img_box1">
-                    <img class="oldwomen" src="img/oldwomen.jpg" alt="">
+                    <button type="button" class="botton_"><img id="botton__" src="img/startmark.jpg" alt="" /></button>
+                    <div id="cpu_hand">
+                        <img id="cpu_hand_gu" class="pop" src="goo.png" alt="">
+                        <img id="cpu_hand_ch" class="pop" src="choki.png" alt="">
+                        <img id="cpu_hand_pa" class="pop" src="par.png" alt="">
+
+                    </div>
                 </div>
-            </section class="main_2">
+
+                <div class="choice">
+
+                    <img id="oldwomen" class="oldmen_baby" src="img/oldwomen.jpg" alt="">
+                    <img id="baby" src="Untitled3.jpg" alt="">
+                    <div class="choice__">
+                        <p class="choice_hand">何を出す？？</p>
+                        <div class="hand_box">
+                            <button type="button" class="botton_1"><img id="my_hand_gu" src="goo.png" alt=""></button>
+                            <button type="button" class="botton_2"><img id="my_hand_ch" src="choki.png" alt=""></button>
+                            <button type="button" class="botton_3"><img id="my_hand_pa" src="par.png" alt=""></button>
+                        </div>
+                        <div id="result">結果</div>
+                    </div>
+                </div>
 
 
-            <!-- とりあえず -->
-            <ul>
+
+
+    </div>
+    </section class="main_2">
+
+
+    <!-- とりあえず -->
+    <!-- <ul>
                 <li id="gu_btn">グー</li>
                 <li id="cho_btn">チョキ</li>
                 <li id="par_btn">パー</li>
             </ul>
             <div id="com_hand">コンピューターの出した手は？</div>
-            <div id="judgment">結果は？</div>
-        </main>
+            <div id="judgment">結果は？</div> -->
+    </main>
 
-        <footer>フッター</footer>
+    <footer>フッター</footer>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
-            // ぐーチョキぱーのコメントを定義
-            $(function () {
-                const result = ['グー', 'チョキ', 'パー'];
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // ぐーチョキぱーのコメントを定義
+        $(function () {
+            const result = ['グー', 'チョキ', 'パー'];
 
-                // スタートするボタンをクリック
-                $('#botton__').on('click', function () {
+            // スタートするボタンをクリック
+            $('#botton__').on('click', function () {
 
-                    // ランダムナンバーを呼び込む
-                    let rand = Math.floor(Math.random() * 3);
+                // ランダムナンバーを呼び込む
+                let rand = Math.floor(Math.random() * 3);
 
-                    // 0ぐー、1チョキ、2パーの画像を表示
-                    //$('#cpu_hand').text('コンピュータの手' + result[rand]);
+                // 0ぐー、1チョキ、2パーの画像を表示
+                //$('#cpu_hand').text('コンピュータの手' + result[rand]);
 
-                    if (rand == 0) {
-                        document.getElementById("cpu_hand_gu").style.display = "block";
-                        //$('#cpu_hand').text('ぐー');
-                        //$('cpu_hand_gu').toggle();
-                        $('#my_hand_gu').on('click', function () {
-                            console.log('あいこ');
-                        })
+                if (rand == 0) {
+                    document.getElementById("cpu_hand_gu").style.display = "block";
+                    //$('#cpu_hand').text('ぐー');
+                    //$('cpu_hand_gu').toggle();
 
 
-                    } else if (rand == 1) {
-                        document.getElementById("cpu_hand_ch").style.display = "block";
-                        //$('#cpu_hand').text('チョキ');
-                        //$('cpu_hand_ch').toggle();
 
-                    } else {
-                        document.getElementById("cpu_hand_pa").style.display = "block";
-                        //$('#cpu_hand').text('パー');
-                        //$('cpu_hand_pa').toggle();
-                    }
+                } else if (rand == 1) {
+                    document.getElementById("cpu_hand_ch").style.display = "block";
+                    //$('#cpu_hand').text('チョキ');
+                    //$('cpu_hand_ch').toggle();
 
-
-                    // 
-                    // 
-                    // 
+                } else {
+                    document.getElementById("cpu_hand_pa").style.display = "block";
+                    //$('#cpu_hand').text('パー');
+                    //$('cpu_hand_pa').toggle();
+                }
 
 
-                });
+                // 
+                // 
+                // 
 
-                // 人間が負ける手を選ぶ
-                // グーを選んだ時
-                // let hand = ['ぐ', 'ちょ', 'ぱ'];
 
-                // $('#my_hand_gu').on('click', function () {
+            });
 
-                // let rand = Math.floor(Math.random() * 3);
+            // 人間が負ける手を選ぶ
+            // グーを選んだ時
+            // let hand = ['ぐ', 'ちょ', 'ぱ'];
+
+            $('#my_hand_gu').on('click', function () {
+
+                let rand = Math.floor(Math.random() * 3);
                 // console.log('hogehoge')
                 // 0ぐー、1チョキ、2パーだから
-                // if (hand == 0) {
-                // $('#result').text('不正解');
-                // console.log('huuuuuuuuuu')
-
-                // } else if (hand == 1) {
-                // $('#result').text('不正解');
-
-                // } else {
-                // $('#result').text('正解');
-                // document.getElementById("baby").style.display = "block";
-                // }
-
-                // });
 
 
+                if (rand == 0) {
+                    $('#result').text('不正解');
+                    // console.log('huuuuuuuuuu')
 
-                // チョキを選んだ時
-                // $('#my_hand_ch').on('click', function () {
-                //     let rand = Math.floor(Math.random() * 3);
-                //     console.log('hogehoge')
+                } else if (rand == 1) {
+                    $('#result').text('不正解');
+
+                } else {
+                    $('#result').text('正解');
+                    document.getElementById("baby").style.display = "block";
+                }
+
+            });
+
+
+
+            // チョキを選んだ時
+            $('#my_hand_ch').on('click', function () {
+                let rand = Math.floor(Math.random() * 3);
+                console.log('hogehoge')
                 //     // 0ぐー、1チョキ、2パーだから
-                //     if (rand == 0) {
-                //         $('#result').text('正解');
+                if (rand == 0) {
+                    $('#result').text('正解');
 
-                //     } else if (rand == 1) {
-                //         $('#result').text('不正解');
+                } else if (rand == 1) {
+                    $('#result').text('不正解');
 
-                //     } else {
-                //         $('#result').text('不正解');
-                //     }
+                } else {
+                    $('#result').text('不正解');
+                }
 
-                // });
-                // // パーを選んだ時
-                // $('#my_hand_pa').on('click', function () {
-                //     let rand = Math.floor(Math.random() * 3);
-                //     console.log('hogehoge')
+            });
+            // // パーを選んだ時
+            $('#my_hand_pa').on('click', function () {
+                let rand = Math.floor(Math.random() * 3);
+                console.log('hogehoge')
                 //     // 0ぐー、1チョキ、2パーだから
-                //     if (rand == 0) {
-                //         $('#result').text('不正解');
+                if (rand == 0) {
+                    $('#result').text('不正解');
 
-                //     } else if (rand == 1) {
-                //         $('#result').text('正解');
+                } else if (rand == 1) {
+                    $('#result').text('正解');
 
-                //     } else {
-                //         $('#result').text('不正解');
-                //     }
-
-                // });
-
-                // $('#result')
-
+                } else {
+                    $('#result').text('不正解');
+                }
 
             });
 
 
 
 
+        });
 
-        </script>
+
+
+
+
+    </script>
 
 
     </div>

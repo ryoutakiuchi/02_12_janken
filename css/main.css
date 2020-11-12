@@ -140,7 +140,8 @@ color: black;
 }
 
 #oldwomen{
-    width: 300px;
+    height: 300px;
+    width: auto;
     padding-left: 10px;
     padding-top: 20px;
 
